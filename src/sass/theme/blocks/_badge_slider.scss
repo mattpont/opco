@@ -1,0 +1,28 @@
+.badge_slider {
+    .swiper {
+        width: 100%;
+        height: 240px;
+        padding: 0 50px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-inline: 2rem;
+        width: auto;
+    }
+    .swiper-slide img {
+        max-height: 150px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+    }
+}

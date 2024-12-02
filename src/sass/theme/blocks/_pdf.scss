@@ -1,0 +1,16 @@
+.pdf_thumbnail {
+    &__card {
+        width: 212px;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__caption {
+        font-size: var(--fs-400);
+        font-weight: var(--fw-400);
+        padding-block: 0.5rem;
+    }
+    &__size {
+        font-size: var(--fs-300);
+    }
+}

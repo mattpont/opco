@@ -1,0 +1,40 @@
+.blog {
+    .news_grid__item {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+    }
+}
+.blog__image {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.related {
+    position: sticky;
+    top: var(--h-top);
+    display: grid;
+    gap: 1rem;
+    &__grid {
+    }
+    &__card {
+        display: grid;
+        transition: var(--transition);
+    }
+    &__image {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    &__content {
+        background-color: var(--col-blue-300);
+        padding: 0.75rem 0.5rem;
+    }
+    &__title {
+        color: var(--col-dark);
+        font-weight: var(--fw-600);
+        font-size: var(--fs-400);
+        text-transform: uppercase;
+    }
+}

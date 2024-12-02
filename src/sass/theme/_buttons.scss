@@ -1,0 +1,27 @@
+.button {
+    background-color: var(--col-blue-300);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--col-light);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-top-left-radius: 100vw;
+    border-bottom-left-radius: 100vw;
+    transition: background-color var(--transition);
+    min-width: 270px;
+    align-self: center;
+    font-weight: var(--fw-700);
+    img {
+        width: 30px;
+        height: 30px;
+    }
+    &:hover {
+        color: var(--col-light);
+        background-color: var(--col-red-400);
+    }
+}
+
+.button--white {
+    background-color: var(--col-light);
+    color: var(--col-blue-300);
+}

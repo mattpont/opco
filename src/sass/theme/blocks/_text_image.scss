@@ -1,0 +1,46 @@
+.text_image_5050__content {
+    > * {
+        max-width: 54ch;
+    }
+    h2 {
+        max-width: 23ch;
+    }
+}
+
+.text_image_5050 {
+    position: relative;
+    .overlay {
+        background-size: 30vw;
+        background-repeat: repeat-y;
+        background-position: left center;
+        background-image: url(../img/dots--dk.svg);
+        position: absolute;
+        inset: 0;
+        opacity: 0.1;
+    }
+    &.bg--theme {
+        .overlay {
+            background-image: url(../img/dots--wo.svg);
+        }
+    }
+    img {
+        width: 100%;
+        aspect-ratio: 6 / 4;
+        object-fit: cover;
+        object-position: center;
+        margin-bottom: 1rem;
+    }
+}
+
+.two_col_text {
+    &__image {
+        width: 100%;
+        aspect-ratio: 6 / 4;
+        object-fit: cover;
+        object-position: center;
+        margin-bottom: 1rem;
+    }
+    h3 {
+        color: var(--_theme-fg);
+    }
+}

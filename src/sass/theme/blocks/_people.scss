@@ -1,0 +1,55 @@
+.people {
+    &__card {
+        cursor: pointer;
+        text-align: center;
+        h2 {
+            font-weight: var(--fw-900);
+        }
+        img {
+            display: block;
+            aspect-ratio: 1;
+            width: 100%;
+            max-width: 200px;
+            margin-inline: auto;
+            object-fit: cover;
+        }
+    }
+    &__role {
+        font-size: var(--fs-300);
+        font-weight: var(--fw-900);
+    }
+    @media all and (min-width:576px) {
+        .modal-dialog {
+            max-width: 70vw;
+        }
+    }
+    .modal-content {
+        border-radius: 0;
+        border: none;
+        background-color: transparent;
+        position: relative;
+        button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 50px;
+            height: 50px;
+            background: transparent;
+            border: 0;
+            z-index: 9;
+        }
+        .close {
+            text-align: right;
+        }
+        .modal-body {
+            background-color: white;
+            // background-image: url(../img/grey-bg.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            .person__content {
+                font-size: var(--fs-300);
+            }
+        }
+    }
+}

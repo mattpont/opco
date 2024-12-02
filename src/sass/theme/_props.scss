@@ -1,0 +1,78 @@
+$col-primary: #5D7F9C;
+$col-dark: #666666;
+$col-darkest: #4A4A4A;
+$col-light: #F2F2F2;
+
+:root {
+
+    --hsl-blue-400: 201 100% 34%; // #0071AE
+    --hsl-blue-300: 192 100% 44%; // #00AFD6
+   
+    --hsl-red-400: 0 100% 54%; // #FF1312
+
+    --hsl-green-400: 95 62% 41%; // #5EAA28
+
+    --hsl-teal-400: 173 21% 46%; // #5C8D87
+    --hsl-teal-300: 156 32% 51%; // #5BAB8B
+
+    --hsl-orange-400: 25 100% 57%; // #FF7F23
+
+    --hsl-purple-400: 306 25% 55%; // #A86FA2
+
+    --hsl-dark: 0 0% 0%;
+    --hsl-grey: 0 0% 97%;
+    --hsl-light: 0 0% 100%;
+
+    --h-top: 90px;
+    --h-top-desktop: 125px;
+
+    --col-blue-300: hsl(var(--hsl-blue-300) / 1);
+    --col-blue-400: hsl(var(--hsl-blue-400) / 1);
+
+    --col-red-400:     hsl(var(--hsl-red-400) / 1);
+
+    --col-green-400:   hsl(var(--hsl-green-400) / 1);
+
+    --col-teal-400:   hsl(var(--hsl-teal-400) / 1);
+    --col-teal-300:   hsl(var(--hsl-teal-300) / 1);
+
+    --col-orange-400:     hsl(var(--hsl-orange-400) / 1);
+    --col-purple-400:     hsl(var(--hsl-purple-400) / 1);
+
+    --col-dark:     hsl(var(--hsl-dark) / 1);
+    --col-grey:  hsl(var(--hsl-grey) / 1);
+    --col-light:    hsl(var(--hsl-light) / 1);
+
+
+    // --fs-200: clamp(0.72rem, calc(0.72rem + 0.00vw), 0.72rem);
+    // --fs-300: clamp(0.84rem, calc(0.84rem + 0.00vw), 0.84rem);
+    // --fs-350: clamp(1.05rem, calc(1.05rem + 0.00vw), 1.05rem);
+    // --fs-400: clamp(1.13rem, calc(1.13rem + 0.00vw), 1.13rem);
+    // --fs-450: 25px;
+    // --fs-500: clamp(1.50rem, calc(1.50rem + 0.00vw), 1.50rem);
+    // --fs-600: clamp(2.00rem, calc(2.00rem + 0.00vw), 2.00rem);
+    // --fs-700: clamp(2.66rem, calc(2.66rem + 0.00vw), 2.66rem);
+    // --fs-800: clamp(3.55rem, calc(3.55rem + 0.00vw), 3.55rem);
+    // --fs-900: clamp(4.74rem, calc(4.74rem + 0.00vw), 4.74rem);
+
+    --fs-900: 2.666667rem; //h1
+    --fs-800: 2.3333rem; // h2
+    --fs-700: 2rem; // h3
+    --fs-600: 1.666667rem; // h4
+    --fs-500: 1.388889rem; // larger
+    --fs-450: 1.2rem; // body
+    --fs-400: 1rem; // body
+    --fs-300: 0.8333rem;
+    --fs-200: 0.6667rem;
+    --fs-100: 0.5556rem;
+
+
+    --ff-body: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --ff-heading: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    --fw-400: 400;
+    --fw-700: 600;
+    --fw-900: 700;
+
+    --transition: 250ms ease-out;
+}

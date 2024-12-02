@@ -1,0 +1,102 @@
+header {
+    .top_nav {
+        background-color: var(--col-blue-400);
+        font-size: var(--fs-300);
+        ul {
+            display: flex;
+            gap: 1rem;
+            justify-content: end;
+        }
+        li {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+            transition: color var(--transition);
+            color: var(--col-light);
+            &:hover {
+                color: var(--col-grey);
+            }
+        }
+    }
+
+    background-color: white;
+    transition: var(--transition);
+
+    a.nav-link {
+        color: var(--col-blue-400);
+        font-weight: var(--fw-900);
+        font-size: var(--fs-300);
+        text-transform: uppercase;
+        padding: 0.25rem 0.5rem;
+        border-radius: 100px;
+        line-height: 1.4;
+        transition: var(--transition);
+        @media (min-width:992px) {
+            &:hover {
+                color: var(--col-red-400);
+            }
+        }
+    }
+    .dropdown-menu a {
+        text-transform: initial;
+    }
+
+    .logo-container {
+        max-width: 140px;
+        margin-right: 1rem;
+    }
+    .logo {
+        background-image: url(../img/iht-logo.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        aspect-ratio: 2.2 / 1;
+        width: 140px;
+        max-width: 100%;
+    }
+
+    &.hide {
+        transform: translateY(-140px);
+    }
+
+    .dropdown-menu {
+        border-color: transparent;
+        background-color: var(--col-blue-400);
+        a {
+            color: var(--col-light);
+        }
+        @media (min-width:992px) {
+            margin-top: 1.3rem !important;
+            min-width: 300px;
+            :before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 1rem;
+                top: -8px;
+                border-bottom: 8px solid var(--col-blue-400);
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+            }
+            box-shadow: 0 40px 40px -20px rgba(0,0,0,0.5);
+            text-transform: uppercase;
+            font-size: var(--fs-300);
+
+        
+            .dropdown-item {
+                padding: 0 1rem;
+                line-height: 24px;
+                padding-block: 5px;
+                transition: background-color var(--transition), color var(--transition);
+                &:hover {
+                    color: white;
+                    background-color: var(--col-red-400);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
