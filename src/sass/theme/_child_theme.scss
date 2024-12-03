@@ -64,16 +64,26 @@ main {
     
 }
 
+#wrapper-footer {
+    background-color: $col-darkest;
+}
+
+#wrapper-footer .container {
+    margin-top: -48px;
+}
+
 .btn-primary {
-    color: var(--col-blue-600);
-    background-color: var(--col-blue-300);
-    border-color: var(--col-blue-300);
+    color: $col-darkest;
+    background-color: $col-btn-green;
+    border-color: $col-btn-green;
     padding-inline: 1rem;
     font-weight: var(--fw-900);
     transition: color var(--transition), background-color var(--transition);
+    border-width: 2px;
     &:hover, &:focus-visible, &:active {
-        color: white !important;
-        background-color: var(--col-blue-600);
+        color: $col-darkest !important;
+        background-color: white;
+        border-color: $col-btn-border;
     }
 }
 

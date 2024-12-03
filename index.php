@@ -90,36 +90,6 @@ get_header();
     -->
     </div>
 </main>
-<?php
-add_action('wp_footer', function () {
-    ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
-    integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-    (function($) {
-
-        var $grid = $('#newsGrid').isotope({
-            itemSelector: '.grid_item',
-            percentPosition: true,
-            layoutMode: 'fitRows',
-        });
-
-        $('.filters').on('click', 'button', function() {
-            var filterValue = $(this).attr('data-filter');
-            $('.filters').find('.active').removeClass('active');
-            $(this).addClass('active');
-            $grid.isotope({
-                filter: filterValue
-            });
-        });
-
-
-
-    })(jQuery);
-</script>
-<?php
-}, 9999);
-
+<?
 get_footer();
 ?>

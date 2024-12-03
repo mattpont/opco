@@ -6793,7 +6793,7 @@
 
 	  // header background
 
-	  $(document).on('scroll', function () {
+	  jQuery(document).on('scroll', function ($) {
 	    var $nav = $("#navbar");
 	    // $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height() );
 	    if (!$('#primaryNav').hasClass('show')) {
@@ -6803,16 +6803,16 @@
 	    $(".dropdown-toggle").removeClass('show');
 	    $(".dropdown-toggle").blur();
 	  });
-	  $('#navToggle').on('click', function () {
+	  jQuery('#navToggle').on('click', function ($) {
 	    var $nav = $("#navbar");
 	    $nav.toggleClass('navdark');
 	  });
 
 	  // hide menu on click outside
-	  $("body").click(function (event) {
-	    var navigation = $(event.target).parents(".navbar").length;
+	  jQuery("body").click(function (event) {
+	    var navigation = jQuery(event.target).parents(".navbar").length;
 	    if (!navigation) {
-	      $(".navbar .navbar-collapse").collapse("hide");
+	      jQuery(".navbar .navbar-collapse").collapse("hide");
 	    }
 	  });
 	})(jQuery);

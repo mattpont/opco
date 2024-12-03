@@ -1,7 +1,9 @@
-$col-primary: #5D7F9C;
-$col-dark: #666666;
-$col-darkest: #4A4A4A;
-$col-light: #F2F2F2;
+$col-primary: #05FF98;
+$col-dark: rgb(29,66,32);
+$col-light: rgb(0,176,102);
+$col-darkest: rgb(29,66,32);
+$col-btn-green: #05FF98;
+$col-btn-border: #05FF00;
 
 :root {
 
@@ -23,8 +25,8 @@ $col-light: #F2F2F2;
     --hsl-grey: 0 0% 97%;
     --hsl-light: 0 0% 100%;
 
-    --h-top: 90px;
-    --h-top-desktop: 125px;
+    --h-top: 35px;
+    --h-top-desktop: 35px;
 
     --col-blue-300: hsl(var(--hsl-blue-300) / 1);
     --col-blue-400: hsl(var(--hsl-blue-400) / 1);
@@ -67,8 +69,8 @@ $col-light: #F2F2F2;
     --fs-100: 0.5556rem;
 
 
-    --ff-body: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --ff-heading: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --ff-body: "Poppins", serif;
+    --ff-heading: "Poppins", serif;
 
     --fw-400: 400;
     --fw-700: 600;
