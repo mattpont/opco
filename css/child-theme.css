@@ -21914,7 +21914,7 @@ header .dropdown-menu a {
   min-height: 500px;
   display: flex;
   align-items: center;
-  background-color: var(--col-blue-400);
+  background-color: rgb(29, 66, 32);
   width: 100%;
   isolation: isolate;
 }
@@ -22350,6 +22350,11 @@ main a {
   font-weight: var(--fw-600);
 }
 
+#field_1_1 {
+  background: #E5E5E5;
+  padding: 1rem;
+}
+
 #wrapper-footer {
   background-color: rgb(29, 66, 32);
 }
@@ -22370,6 +22375,21 @@ main a {
 .btn-primary:hover, .btn-primary:focus-visible, .btn-primary:active {
   color: rgb(29, 66, 32) !important;
   background-color: white;
+  border-color: #05FF00;
+}
+
+.btn-primary-reverse {
+  color: rgb(29, 66, 32);
+  background-color: white;
+  border-color: #05FF98;
+  padding-inline: 1rem;
+  font-weight: var(--fw-900);
+  transition: color var(--transition), background-color var(--transition);
+  border-width: 2px;
+}
+.btn-primary-reverse:hover, .btn-primary-reverse:focus-visible, .btn-primary-reverse:active {
+  color: rgb(29, 66, 32) !important;
+  background-color: #05FF98;
   border-color: #05FF00;
 }
 

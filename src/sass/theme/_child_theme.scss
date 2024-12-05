@@ -64,6 +64,11 @@ main {
     
 }
 
+#field_1_1{
+    background: #E5E5E5;
+    padding: 1rem;
+}
+
 #wrapper-footer {
     background-color: $col-darkest;
 }
@@ -83,6 +88,21 @@ main {
     &:hover, &:focus-visible, &:active {
         color: $col-darkest !important;
         background-color: white;
+        border-color: $col-btn-border;
+    }
+}
+
+.btn-primary-reverse {
+    color: $col-darkest;
+    background-color: white;
+    border-color: $col-btn-green;
+    padding-inline: 1rem;
+    font-weight: var(--fw-900);
+    transition: color var(--transition), background-color var(--transition);
+    border-width: 2px;
+    &:hover, &:focus-visible, &:active {
+        color: $col-darkest !important;
+        background-color: $col-btn-green;
         border-color: $col-btn-border;
     }
 }

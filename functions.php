@@ -12,6 +12,7 @@ define('CB_THEME_DIR', WP_CONTENT_DIR . '/themes/opco');
 
 require_once CB_THEME_DIR . '/inc/cb-theme.php';
 require_once CB_THEME_DIR . '/inc/cb-finder.php';
+require_once CB_THEME_DIR . '/inc/cb-help.php';
 
 /**
  * Removes the parent themes stylesheet and scripts from inc/enqueue.php
@@ -87,3 +88,24 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
+
+add_filter( 'gform_submit_button', 'add_custom_css_classes', 10, 2 );
+function add_custom_css_classes( $button, $form ) {
+    $fragment = WP_HTML_Processor::create_fragment( $button );
+    $fragment->next_token();
+    $fragment->add_class( 'btn' );
+    $fragment->add_class( 'btn-primary' );
+    $fragment->add_class( 'd-block' );
+    $fragment->add_class( 'rounded-pill' );
+    $fragment->add_class( 'w-100' );
+    $fragment->remove_class( 'gform_button' );
+    $fragment->remove_class( 'button' );
+    $fragment->remove_class( 'gform-button--width-full' );
+    return $fragment->get_updated_html();
+}
+
+add_filter('query_vars', 'add_my_var');
+function add_my_var($public_query_vars) {
+    $public_query_vars[] = 'company';
+    return $public_query_vars;
+}

@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
 
-    background-color: var(--col-blue-400);
+    background-color: $col-darkest;
 
     &.hero--short {
         height: 40vh;

@@ -33,10 +33,10 @@ if ( get_query_var('region') ) {
 			</div>
 
 <?php
-echo "division: " . $queried_object->term_id;
-echo "<hr>";
-echo "region: " . get_query_var('region');
-echo "<hr>";
+//echo "division: " . $queried_object->term_id;
+//echo "<hr>";
+//echo "region: " . get_query_var('region');
+//echo "<hr>";
 
 $args = array(
 	'post_type' => 'opco',
@@ -65,15 +65,33 @@ if ( $the_query->have_posts() ) {
 		$the_query->the_post();
 ?>
 			<div class="row">
+			    <div class="col py-2">
+			    	<hr>
+			    </div>
+			</div>
+			<div class="row">
 			    <div class="col-lg-4"></div>
-			    <div class="col-lg-4 text-center">
-<?php
-if (has_post_thumbnail( $post->ID ) ):
-?>
-  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
-  <img src="<?php echo $image[0]; ?>" class="img-fluid w-100" alt="<?=get_the_title()?>">
-<?php endif; ?>
+			    <div class="col-lg-2 text-center d-flex align-items-center">
+					<?php
+					if (has_post_thumbnail( $post->ID ) ):
+						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+					?>
+						<img src="<?php echo $image[0]; ?>" class="img-fluid w-100" alt="<?=get_the_title()?>">
+					<?php
+					endif;
+					?>
 				</div>
+			    <div class="col-lg-2 text-center">
+			    	<a href="#" class="btn btn-primary d-block mb-2 rounded-pill">Refer</a>
+			    	<?php
+			    	if ( get_field("contact_website") ) {
+			    	?>
+			    	<a href="<?=get_field("contact_website")?>" target="_blank" class="btn btn-primary d-block mb-2 rounded-pill">Website</a>
+			    	<?php
+			    	}
+			    	?>
+			    	<a href="/help/?company=<?=get_the_ID()?>" class="btn btn-primary d-block mb-0 rounded-pill">Contact</a>
+			    </div>
 			    <div class="col-lg-4"></div>
 			</div>
 <?php
@@ -177,7 +195,7 @@ wp_reset_postdata();
 <script>
 jQuery( document ).ready(function($) {
 	$('select#division_select').on('change', function() {
-		console.log( this.value );
+		//console.log( this.value );
 		window.location = $(this).val();
 	});
 });
