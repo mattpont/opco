@@ -22435,6 +22435,76 @@ main a {
   font-weight: 600;
 }
 
+#gform_2 .gfield {
+  background: #E5E5E5;
+  padding: 10px;
+}
+
+.gform_wrapper.gravity-theme #gform_2 .gform_footer.left_label,
+.gform_wrapper.gravity-theme #gform_2 .gform_page_footer.left_label {
+  padding-left: 0;
+}
+
+.gform_wrapper.gravity-theme #gform_2 .gform_page_footer input + input,
+.gform_wrapper.gravity-theme #gform_2 .gform_page_footer input + button {
+  margin-left: 0;
+}
+
+.gform_wrapper.gravity-theme #gform_2 .left_label .gfield_label,
+.gform_wrapper.gravity-theme #gform_2 .right_label .gfield_label {
+  width: 40%;
+  align-content: center;
+}
+
+.gform_wrapper.gravity-theme #gform_2 .left_label div.gfield > div:not(.ui-resizable-handle):not(.gfield-admin-icons),
+.gform_wrapper.gravity-theme #gform_2 .right_label div.gfield > div:not(.ui-resizable-handle):not(.gfield-admin-icons) {
+  width: 60%;
+}
+
+#field_2_7 label {
+  width: 100% !important;
+  margin-bottom: 10px;
+}
+
+#field_2_7 .ginput_container {
+  width: 100% !important;
+}
+
+.gfield--type-html {
+  width: 100%;
+  margin: 0 !important;
+  background: none !important;
+  text-align: center;
+}
+
+#gf_progressbar_wrapper_2,
+#gform_2 .gfield_required {
+  display: none;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  background-color: #fff;
+  z-index: 99;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+.autocomplete-active {
+  background-color: #1e90ff !important;
+  color: #fff;
+}
+
 .container-xl > .container-xl {
   padding-inline: 0;
 }

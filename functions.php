@@ -13,6 +13,7 @@ define('CB_THEME_DIR', WP_CONTENT_DIR . '/themes/opco');
 require_once CB_THEME_DIR . '/inc/cb-theme.php';
 require_once CB_THEME_DIR . '/inc/cb-finder.php';
 require_once CB_THEME_DIR . '/inc/cb-help.php';
+require_once CB_THEME_DIR . '/inc/cb-refer.php';
 
 /**
  * Removes the parent themes stylesheet and scripts from inc/enqueue.php
@@ -90,6 +91,8 @@ function understrap_child_customize_controls_js() {
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
 
 add_filter( 'gform_submit_button', 'add_custom_css_classes', 10, 2 );
+add_filter( 'gform_next_button', 'add_custom_css_classes', 10, 2 );
+add_filter( 'gform_previous_button', 'add_custom_css_classes', 10, 2 );
 function add_custom_css_classes( $button, $form ) {
     $fragment = WP_HTML_Processor::create_fragment( $button );
     $fragment->next_token();

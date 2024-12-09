@@ -82,7 +82,7 @@ if ( $the_query->have_posts() ) {
 					?>
 				</div>
 			    <div class="col-lg-2 text-center">
-			    	<a href="#" class="btn btn-primary d-block mb-2 rounded-pill">Refer</a>
+			    	<a href="/refer/?company=<?=get_the_ID()?>" class="btn btn-primary d-block mb-2 rounded-pill">Refer</a>
 			    	<?php
 			    	if ( get_field("contact_website") ) {
 			    	?>
@@ -104,6 +104,7 @@ if ( $the_query->have_posts() ) {
 <?php
 	esc_html_e( 'Sorry, no posts matched your criteria.' );
 ?>
+			    	<button onclick="history.back()" class="btn btn-primary d-block w-100 mb-0 mt-3 rounded-pill">< Back</button>
 				</div>
 			    <div class="col-lg-4"></div>
 			</div>
