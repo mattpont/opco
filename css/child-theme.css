@@ -22481,7 +22481,7 @@ main a {
 
 #gf_progressbar_wrapper_2,
 .gfield_required {
-  display: none;
+  display: none !important;
 }
 
 .autocomplete-items {
