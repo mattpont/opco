@@ -101,9 +101,8 @@ if ( $the_query->have_posts() ) {
 			<div class="row">
 			    <div class="col-lg-4"></div>
 			    <div class="col-lg-4 text-center">
-<?php
-	esc_html_e( 'Sorry, no posts matched your criteria.' );
-?>
+					<?php esc_html_e( 'We cannot find an exact OpCo to match your search, but please enter the referral details and we will get back to you with a suggestion.' ); ?>
+            		<?php echo do_shortcode('[gravityform id="1" title="false" ajax="true" field_values=""]'); ?>
 			    	<button onclick="history.back()" class="btn btn-primary d-block w-100 mb-0 mt-3 rounded-pill">< Back</button>
 				</div>
 			    <div class="col-lg-4"></div>
