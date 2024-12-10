@@ -64,7 +64,7 @@ main {
     
 }
 
-#field_1_1{
+#field_1_1 {
     background: #E5E5E5;
     padding: 1rem;
 }
@@ -154,7 +154,7 @@ main {
     font-weight: 600;
 }
 
-#gform_2 .gfield {
+.gfield {
     background: #E5E5E5;
     padding: 10px;
 }
@@ -164,8 +164,8 @@ main {
     padding-left: 0;
 }
 
-.gform_wrapper.gravity-theme #gform_2 .gform_page_footer input+input,
-.gform_wrapper.gravity-theme #gform_2 .gform_page_footer input+button {
+.gform_wrapper.gravity-theme .gform_page_footer input+input,
+.gform_wrapper.gravity-theme .gform_page_footer input+button {
     margin-left: 0;
 }
 

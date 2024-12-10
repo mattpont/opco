@@ -22435,7 +22435,7 @@ main a {
   font-weight: 600;
 }
 
-#gform_2 .gfield {
+.gfield {
   background: #E5E5E5;
   padding: 10px;
 }
@@ -22445,8 +22445,8 @@ main a {
   padding-left: 0;
 }
 
-.gform_wrapper.gravity-theme #gform_2 .gform_page_footer input + input,
-.gform_wrapper.gravity-theme #gform_2 .gform_page_footer input + button {
+.gform_wrapper.gravity-theme .gform_page_footer input + input,
+.gform_wrapper.gravity-theme .gform_page_footer input + button {
   margin-left: 0;
 }
 
