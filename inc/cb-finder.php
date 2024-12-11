@@ -3,6 +3,15 @@ add_shortcode( 'finder', 'finder' );
 function finder() {
 ob_start();
 ?>
+<div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4 text-center">
+        <div class="progress mb-5">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+    <div class="col-lg-4"></div>
+</div>
 
 <div class="row">
     <div class="col text-center">
@@ -31,7 +40,6 @@ foreach( $terms as $term ) {
     </div>
     <div class="col-lg-4"></div>
 </div>
-
 <?php
 return ob_get_clean();
 }

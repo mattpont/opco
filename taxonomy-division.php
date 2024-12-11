@@ -20,6 +20,9 @@ $queried_object = get_queried_object();
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
+        <div class="row">
+        	<div class="col-md-12 content-area" id="primary">
+            	<main class="site-main" id="main">
 
 
 <?php
@@ -27,8 +30,17 @@ if ( get_query_var('region') ) {
 	//We're in the region stage now...
 ?>
 			<div class="row">
+			    <div class="col-lg-4"></div>
+			    <div class="col-lg-4 text-center">
+			        <div class="progress mb-5">
+			            <div class="progress-bar bg-primary" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+			        </div>
+			    </div>
+			    <div class="col-lg-4"></div>
+			</div>
+			<div class="row">
 				<div class="col text-center">
-					<h2 class="h3 mt-4 mb-5">Your results:</h1>
+					<h2 class="h3 mt-0 mb-5">Your results:</h1>
 				</div>
 			</div>
 
@@ -101,6 +113,15 @@ if ( $the_query->have_posts() ) {
 			<div class="row">
 			    <div class="col-lg-4"></div>
 			    <div class="col-lg-4 text-center">
+			        <div class="progress mb-5">
+			            <div class="progress-bar bg-primary" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+			        </div>
+			    </div>
+			    <div class="col-lg-4"></div>
+			</div>
+			<div class="row">
+			    <div class="col-lg-4"></div>
+			    <div class="col-lg-4 text-center">
 					<?php esc_html_e( 'We cannot find an exact OpCo to match your search, but please enter the referral details and we will get back to you with a suggestion.' ); ?>
             		<?php echo do_shortcode('[gravityform id="1" title="false" ajax="true" field_values=""]'); ?>
 			    	<button onclick="history.back()" class="btn btn-primary d-block w-100 mb-0 mt-3 rounded-pill">< Back</button>
@@ -120,8 +141,18 @@ wp_reset_postdata();
 	if ( $queried_object->parent == 0 ) {
 ?>
 			<div class="row">
+			    <div class="col-lg-4"></div>
+			    <div class="col-lg-4 text-center">
+			        <div class="progress mb-5">
+			            <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+			        </div>
+			    </div>
+			    <div class="col-lg-4"></div>
+			</div>
+
+			<div class="row">
 				<div class="col text-center">
-					<h2 class="h3 mt-4 mb-5">Select a <?=$queried_object->name?> service:</h1>
+					<h2 class="h3 mt-0 mb-5">Select a <?=$queried_object->name?> service:</h1>
 				</div>
 			</div>
 
@@ -151,10 +182,20 @@ wp_reset_postdata();
 			</div>
 	<?php
 	} else {
-	?>
+	?>			
+			<div class="row">
+			    <div class="col-lg-4"></div>
+			    <div class="col-lg-4 text-center">
+			        <div class="progress mb-5">
+			            <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+			        </div>
+			    </div>
+			    <div class="col-lg-4"></div>
+			</div>
+
 			<div class="row">
 				<div class="col text-center">
-					<h2 class="h3 mt-4 mb-5">Select a region:</h1>
+					<h2 class="h3 mt-0 mb-5">Select a region:</h1>
 				</div>
 			</div>
 
@@ -190,6 +231,10 @@ wp_reset_postdata();
 
 	</div><!-- #content -->
 
+
+</main>
+</div>
+</div>
 </div><!-- #archive-wrapper -->
 
 <script>
