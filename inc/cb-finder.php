@@ -6,8 +6,9 @@ ob_start();
 <div class="row">
     <div class="col-lg-4"></div>
     <div class="col-lg-4 text-center">
+        <h6 class="h6">PROGRESS</h6>
         <div class="progress mb-5">
-            <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-primary text-black" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
         </div>
     </div>
     <div class="col-lg-4"></div>
