@@ -23,7 +23,7 @@ if (isset($_GET['company'])) {
 ?>
 <div class="row">
     <div class="col text-center">
-        <h1 class="h5">Refer an andwis group company</h1>
+        <h1 class="h5">Complete the form to send your referral</h1>
     </div>
 </div>
 <div class="row mb-3">
