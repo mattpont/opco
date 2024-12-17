@@ -157,6 +157,8 @@ wp_reset_postdata();
 			$terms = get_terms( array(
 			    'taxonomy'   => 'division', // Swap in your custom taxonomy name
 			    'hide_empty' => false,
+				'orderby' => 'name',
+				'order' => 'ASC',
 			    'parent' => $queried_object->term_id
 			));
 
@@ -191,7 +193,6 @@ wp_reset_postdata();
 			$taxonomies = get_terms( array(
 				'taxonomy' => 'division',
 				'hide_empty' => true,
-				'orderby' => 'name',
 				'parent' => $queried_object->term_id
 			) );
 
