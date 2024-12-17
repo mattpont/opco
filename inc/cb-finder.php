@@ -47,7 +47,7 @@ foreach( $terms as $term ) {
         'parent' => $term->term_id
     ));
     foreach( $terms_children as $child ) {
-        echo '<option value="/division/'. esc_attr( $child->slug ) .'/" data-tokens="'. $term->slug .' '. $child->slug .'">'. $term->name .' - '. $child->name .'</option>';
+        echo '<option value="/division/'. esc_attr( $child->slug ) .'/" data-tokens="'. str_replace("-"," ",$term->slug) .' '. str_replace("-"," ",$child->slug) .'">'. $term->name .' - '. $child->name .'</option>';
     }
 }
 ?>

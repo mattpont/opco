@@ -166,7 +166,7 @@ wp_reset_postdata();
 			foreach( $terms as $term ) {
 			    // Use get_term_link to get terms permalink
 			    // USe $term->name to return term name
-			    echo '<option value="/division/'. esc_attr( $term->slug ) .'/" data-tokens="'. get_term_link( $term ) .'">'. $term->name .'</option>';
+			    echo '<option value="/division/'. esc_attr( $term->slug ) .'/" data-tokens="'. str_replace("-"," ",$term->slug) .'">'. $term->name .'</option>';
 			}
 			?>
 			        </select>
