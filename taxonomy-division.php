@@ -145,11 +145,46 @@ wp_reset_postdata();
 
 			<div class="row">
 				<div class="col text-center">
-					<h2 class="h3 mt-0 mb-5">Select a <?=$queried_object->name?> service:</h1>
+					<h2 class="h3 mt-0 mb-2">Search for a <?=$queried_object->name?> service:</h1>
 				</div>
 			</div>
 
+			<div class="row mb-5">
+			    <div class="col-lg-4"></div>
+			    <div class="col-lg-4 text-center">
+			        <select class="selectpicker w-100" data-live-search="true">
+			<?php
+			$terms = get_terms( array(
+			    'taxonomy'   => 'division', // Swap in your custom taxonomy name
+			    'hide_empty' => false,
+			    'parent' => $queried_object->term_id
+			));
+
+			// Loop through all terms with a foreach loop
+			foreach( $terms as $term ) {
+			    // Use get_term_link to get terms permalink
+			    // USe $term->name to return term name
+			    echo '<option value="/division/'. esc_attr( $term->slug ) .'/" data-tokens="'. get_term_link( $term ) .'">'. $term->name .'</option>';
+			}
+			?>
+			        </select>
+			    </div>
+			    <div class="col-lg-4"></div>
+			</div>
+
 			<div class="row">
+				<div class="col text-center">
+					<button id="nextbutton" class="btn btn-primary">Next ></button>
+				</div>
+			</div>
+
+			<div class="row d-none">
+				<div class="col text-center">
+					<h2 class="h3 mt-0 mb-5">Or select a <?=$queried_object->name?> service:</h1>
+				</div>
+			</div>
+
+			<div class="row d-none">
 			    <div class="col-lg-4"></div>
 			    <div class="col-lg-4 text-center">
 			<?php
@@ -236,6 +271,10 @@ jQuery( document ).ready(function($) {
 	$('select#division_select').on('change', function() {
 		//console.log( this.value );
 		window.location = $(this).val();
+	});
+
+	$('#nextbutton').on('click', function() {
+		window.location = $(".selectpicker").val();
 	});
 });
 </script>

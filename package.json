@@ -41,7 +41,9 @@
     "url": "https://github.com/understrap/cb-iht2024/issues"
   },
   "homepage": "https://understrap.com",
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap-select": "^1.13.18"
+  },
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "@babel/preset-env": "^7.19.4",

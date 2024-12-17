@@ -18,12 +18,6 @@ session_start();
     <meta
         charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1">
-    <link rel="preload"
-        href="<?=get_stylesheet_directory_uri()?>/fonts/open-sans-v40-latin-700.woff2"
-        as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload"
-        href="<?=get_stylesheet_directory_uri()?>/fonts/open-sans-v40-latin-regular.woff2"
-        as="font" type="font/woff2" crossorigin="anonymous">
     <?php
 if (!is_user_logged_in()) {
     if (get_field('ga_property', 'options')) {
