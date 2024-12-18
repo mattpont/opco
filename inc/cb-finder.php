@@ -3,7 +3,7 @@ add_shortcode( 'finder', 'finder' );
 function finder() {
 ob_start();
 ?>
-<div class="row">
+<div class="row d-none">
     <div class="col-lg-4"></div>
     <div class="col-lg-4 text-center">
         <h6 class="h6">PROGRESS</h6>
@@ -24,7 +24,7 @@ ob_start();
 <div class="row mb-3">
     <div class="col-lg-4"></div>
     <div class="col-lg-4 text-center">
-        <select class="selectpicker w-100" data-live-search="true">
+        <select class="selectpicker w-100" data-live-search="true" title="Please type to filter these services...">
 <?php
 $terms = get_terms( array(
     'taxonomy'   => 'division', // Swap in your custom taxonomy name

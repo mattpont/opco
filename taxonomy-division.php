@@ -29,7 +29,7 @@ $queried_object = get_queried_object();
 if ( get_query_var('region') ) {
 	//We're in the region stage now...
 ?>
-			<div class="row">
+			<div class="row d-none">
 			    <div class="col-lg-4"></div>
 			    <div class="col-lg-4 text-center">
         			<h6 class="h6">PROGRESS</h6>
@@ -132,7 +132,7 @@ wp_reset_postdata();
 } else {
 	if ( $queried_object->parent == 0 ) {
 ?>
-			<div class="row">
+			<div class="row d-none">
 			    <div class="col-lg-4"></div>
 			    <div class="col-lg-4 text-center">
         			<h6 class="h6">PROGRESS</h6>
@@ -213,7 +213,7 @@ wp_reset_postdata();
 	<?php
 	} else {
 	?>			
-			<div class="row">
+			<div class="row d-none">
 			    <div class="col-lg-4"></div>
 			    <div class="col-lg-4 text-center">
        				<h6 class="h6">PROGRESS</h6>
