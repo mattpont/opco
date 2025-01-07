@@ -4,26 +4,38 @@ function finder() {
 ob_start();
 ?>
 <style>
-/* Style the autocomplete dropdown */
+/* Style the container for the autocomplete suggestions */
 .ui-autocomplete {
     position: absolute; /* Ensure it aligns relative to the input */
-    background-color: white;
-    border: 1px solid #ccc;
+    background-color: white; /* White background */
+    border: 1px solid #ccc; /* Light gray border */
     max-height: 200px; /* Limit height */
     overflow-y: auto; /* Enable scrolling */
     z-index: 1000; /* Bring above other elements */
-    font-family: Arial, sans-serif;
-    font-size: 14px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
-    padding: 5px 0;
+    padding: 0; /* Remove padding from the container itself */
+    margin: 0; /* Remove margin */
+    list-style: none; /* Remove bullets */
     box-sizing: border-box; /* Include padding and border in width */
     width: auto; /* Let JavaScript handle exact width */
-    min-width: 0; /* Prevent unwanted expansions */
 }
 
-/* Ensure dropdown doesn’t inherit larger parent container width */
-.ui-autocomplete {
-    max-width: none !important; 
+/* Style each suggestion item */
+.ui-menu-item {
+    padding: 8px 12px; /* Add padding inside items */
+    cursor: pointer; /* Change cursor to pointer */
+    border-bottom: 1px solid #f0f0f0; /* Optional divider between items */
+}
+
+/* Remove border for the last suggestion item */
+.ui-menu-item:last-child {
+    border-bottom: none;
+}
+
+/* Highlight the active (hovered or keyboard-selected) suggestion */
+.ui-state-active {
+    background-color: #f0f0f0; /* Light gray background for active item */
+    color: #333; /* Darker text color */
 }
 </style>
 <div class="row d-none">
