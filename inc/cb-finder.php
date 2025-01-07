@@ -4,36 +4,26 @@ function finder() {
 ob_start();
 ?>
 <style>
-/* Style the container for the autocomplete suggestions */
+/* Style the autocomplete dropdown */
 .ui-autocomplete {
-    background-color: white; /* White background */
-    border: 1px solid #ccc; /* Light gray border */
-    max-height: 200px; /* Limit height to avoid large dropdowns */
-    overflow-y: auto; /* Scrollbar for overflow */
-    z-index: 1000; /* Ensure it appears above other elements */
-    font-family: Arial, sans-serif; /* Adjust font family */
-    font-size: 14px; /* Adjust font size */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
-    padding: 5px 0; /* Add padding around the suggestions */
-    width: auto; /* Default width behavior */
+    position: absolute; /* Ensure it aligns relative to the input */
+    background-color: white;
+    border: 1px solid #ccc;
+    max-height: 200px; /* Limit height */
+    overflow-y: auto; /* Enable scrolling */
+    z-index: 1000; /* Bring above other elements */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    padding: 5px 0;
+    box-sizing: border-box; /* Include padding and border in width */
+    width: auto; /* Let JavaScript handle exact width */
+    min-width: 0; /* Prevent unwanted expansions */
 }
 
-/* Match the width of the autocomplete dropdown to the input field */
+/* Ensure dropdown doesn’t inherit larger parent container width */
 .ui-autocomplete {
-    max-width: 100%; /* Prevent exceeding the input field's width */
-    box-sizing: border-box; /* Include padding and border in width calculation */
-}
-
-/* Style each suggestion item */
-.ui-menu-item {
-    padding: 5px 10px; /* Add padding inside items */
-    cursor: pointer; /* Change cursor to pointer */
-}
-
-/* Highlight the active (hovered or keyboard-selected) suggestion */
-.ui-state-active {
-    background-color: #f0f0f0; /* Light gray background for active item */
-    color: #333; /* Darker text color */
+    max-width: none !important; 
 }
 </style>
 <div class="row d-none">
