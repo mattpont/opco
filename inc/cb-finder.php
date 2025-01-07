@@ -31,7 +31,8 @@ $terms = get_terms( array(
     'hide_empty' => false,
     'order_by' => 'name',
     'order' => 'ASC',
-    'parent' => 0
+    'parent' => 0,
+    'ignore_term_order' => true
 ));
 
 // Loop through all terms with a foreach loop
@@ -44,7 +45,8 @@ foreach( $terms as $term ) {
         'hide_empty' => false,
         'order_by' => 'name',
         'order' => 'ASC',
-        'parent' => $term->term_id
+        'parent' => $term->term_id,
+        'ignore_term_order' => true
     ));
     foreach( $terms_children as $child ) {
         echo '<option value="/division/'. esc_attr( $child->slug ) .'/" data-tokens="'. str_replace("-"," ",$term->slug) .' '. str_replace("-"," ",$child->slug) .'">'. $term->name .' - '. $child->name .'</option>';
