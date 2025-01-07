@@ -150,6 +150,9 @@ function fetch_division_terms() {
         'name__like' => $search_term,
         'hide_empty' => false,
         'number' => 10,
+        'order_by' => 'name',
+        'order' => 'ASC',
+        'ignore_term_order' => true
     ]);
 
     if (is_wp_error($terms)) {
