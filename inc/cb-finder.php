@@ -90,6 +90,7 @@ foreach( $terms as $term ) {
 ?>
         </select>
         <input type="text" id="division-autocomplete" class="w-100 form-control" placeholder="Please type to filter these services...">
+        <input type="hidden" id="division-slug" name="division_slug">
     </div>
     <div class="col-lg-4"></div>
 </div>
@@ -130,7 +131,8 @@ foreach( $terms as $term ) {
 <script>
 jQuery( document ).ready(function($) {
     $('#nextbutton').on('click', function() {
-        window.location = $(".selectpicker").val();
+        //window.location = $(".selectpicker").val();
+        window.location = "/division/" + $("#division-slug").val() + "/";
     });
 });
 </script>

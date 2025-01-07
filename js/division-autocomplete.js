@@ -1,5 +1,4 @@
-jQuery(document).ready(function ($) {
-    console.log('division-autocomplete.js is running');
+jQuery( document ).ready(function($) {
     $("#division-autocomplete").autocomplete({
         source: function (request, response) {
             $.ajax({
@@ -11,20 +10,20 @@ jQuery(document).ready(function ($) {
                     term: request.term,
                 },
                 success: function (data) {
-                    if (data.success) {
-                        response(data.data);
-                    } else {
-                        response([]);
-                    }
-                },
-                error: function () {
-                    response([]);
+                    response(data.data);
                 },
             });
         },
-        minLength: 2, // Minimum characters before triggering search
+        minLength: 2,
         select: function (event, ui) {
-            console.log("Selected term:", ui.item);
+            // Fill the visible input with the term name
+            $("#division-autocomplete").val(ui.item.label);
+
+            // Fill the hidden input with the term slug
+            $("#division-slug").val(ui.item.id);
+
+            // Prevent the default behavior (e.g., form submission)
+            return false;
         },
     });
 });

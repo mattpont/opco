@@ -138,7 +138,6 @@ function enqueue_autocomplete_script() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_autocomplete_script');
 
-// Handle AJAX request for taxonomy terms
 function fetch_division_terms() {
     if (!isset($_GET['term'])) {
         wp_send_json_error('No search term provided.');
@@ -146,15 +145,11 @@ function fetch_division_terms() {
 
     $search_term = sanitize_text_field($_GET['term']);
 
-    // Fetch terms from the 'division' taxonomy
     $terms = get_terms([
         'taxonomy' => 'division',
         'name__like' => $search_term,
         'hide_empty' => false,
-        'number' => 10, // Limit results
-        'order_by' => 'name',
-        'order' => 'ASC',
-        'ignore_term_order' => true
+        'number' => 10,
     ]);
 
     if (is_wp_error($terms)) {
@@ -164,9 +159,9 @@ function fetch_division_terms() {
     $results = [];
     foreach ($terms as $term) {
         $results[] = [
-            'id' => $term->term_id,
-            'label' => $term->name,
-            'value' => $term->name,
+            'id' => $term->slug, // Send the term slug as 'id'
+            'label' => $term->name, // Send the term name as 'label'
+            'value' => $term->name, // Autocomplete's default 'value'
         ];
     }
 
