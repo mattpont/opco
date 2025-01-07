@@ -37,6 +37,10 @@ ob_start();
     background-color: #f0f0f0; /* Light gray background for active item */
     color: #333; /* Darker text color */
 }
+
+.ui-helper-hidden-accessible {
+    display: none;
+}
 </style>
 <div class="row d-none">
     <div class="col-lg-4"></div>
