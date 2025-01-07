@@ -161,9 +161,15 @@ function fetch_division_terms() {
 
     $results = [];
     foreach ($terms as $term) {
+        // Get the parent term name, if available
+        $parent = $term->parent ? get_term($term->parent)->name : null;
+
+        // Format the label as "Parent Term > Term Name" if there's a parent
+        $label = $parent ? "{$parent} > {$term->name}" : $term->name;
+
         $results[] = [
             'id' => $term->slug, // Send the term slug as 'id'
-            'label' => $term->name, // Send the term name as 'label'
+            'label' => $label,   // Send the formatted label
             'value' => $term->name, // Autocomplete's default 'value'
         ];
     }
