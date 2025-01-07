@@ -117,3 +117,60 @@ function add_my_var($public_query_vars) {
     $public_query_vars[] = 'company';
     return $public_query_vars;
 }
+
+function enqueue_autocomplete_script() {
+    // Enqueue jQuery UI for autocomplete functionality
+    wp_enqueue_script('jquery-ui-autocomplete');
+    
+    // Enqueue custom JavaScript for autocomplete
+    wp_enqueue_script(
+        'division-autocomplete',
+        get_stylesheet_directory_uri() . '/js/division-autocomplete.js', // Update the path as needed
+        ['jquery', 'jquery-ui-autocomplete'],
+        '1.0',
+        true
+    );
+
+    // Localize script to pass AJAX URL to JavaScript
+    wp_localize_script('division-autocomplete', 'autocomplete_data', [
+        'ajax_url' => admin_url('admin-ajax.php'),
+    ]);
+}
+add_action('wp_enqueue_scripts', 'enqueue_autocomplete_script');
+
+// Handle AJAX request for taxonomy terms
+function fetch_division_terms() {
+    if (!isset($_GET['term'])) {
+        wp_send_json_error('No search term provided.');
+    }
+
+    $search_term = sanitize_text_field($_GET['term']);
+
+    // Fetch terms from the 'division' taxonomy
+    $terms = get_terms([
+        'taxonomy' => 'division',
+        'name__like' => $search_term,
+        'hide_empty' => false,
+        'number' => 10, // Limit results
+        'order_by' => 'name',
+        'order' => 'ASC',
+        'ignore_term_order' => true
+    ]);
+
+    if (is_wp_error($terms)) {
+        wp_send_json_error($terms->get_error_message());
+    }
+
+    $results = [];
+    foreach ($terms as $term) {
+        $results[] = [
+            'id' => $term->term_id,
+            'label' => $term->name,
+            'value' => $term->name,
+        ];
+    }
+
+    wp_send_json_success($results);
+}
+add_action('wp_ajax_fetch_division_terms', 'fetch_division_terms');
+add_action('wp_ajax_nopriv_fetch_division_terms', 'fetch_division_terms');
