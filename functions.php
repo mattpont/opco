@@ -167,6 +167,9 @@ function fetch_division_terms() {
         // Format the label as "Parent Term > Term Name" if there's a parent
         $label = $parent ? "{$parent} > {$term->name}" : $term->name;
 
+        // Decode any HTML entities (like ampersands) to ensure they are displayed properly
+        $label = html_entity_decode($label, ENT_QUOTES, 'UTF-8');
+
         $results[] = [
             'id' => $term->slug, // Send the term slug as 'id'
             'label' => $label,   // Send the formatted label
