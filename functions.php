@@ -14,6 +14,7 @@ require_once CB_THEME_DIR . '/inc/cb-theme.php';
 require_once CB_THEME_DIR . '/inc/cb-finder.php';
 require_once CB_THEME_DIR . '/inc/cb-help.php';
 require_once CB_THEME_DIR . '/inc/cb-refer.php';
+require_once CB_THEME_DIR . '/inc/cb-feedback.php';
 
 /**
  * Removes the parent themes stylesheet and scripts from inc/enqueue.php
