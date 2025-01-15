@@ -20,18 +20,3 @@ $datereported = date("Y-m-d h:i:sa");
 <?php
 return ob_get_clean();
 }
-
-add_action('gform_after_submission', function ($entry, $form) {
-    // Specify the form ID and the hidden field ID
-    $form_id = 3; // Replace with your Gravity Form ID
-    $hidden_field_id = 14; // Replace with the ID of the hidden field
-
-    // Check if this is the correct form
-    if ((int) $form['id'] === $form_id) {
-        // Get the entry ID
-        $entry_id = "FEEDBACK_" . $entry['id'];
-
-        // Update the hidden field in the entry
-        GFAPI::update_entry_field($entry_id, $hidden_field_id, $entry_id);
-    }
-}, 10, 2);
