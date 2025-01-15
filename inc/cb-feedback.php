@@ -21,7 +21,7 @@ $datereported = date("Y-m-d h:i:sa");
 return ob_get_clean();
 }
 
-add_action('gform_after_submission_3', function ($entry, $form) {
+add_action('gform_pre_submission_3', function ($entry, $form) {
     // Specify the form ID and the hidden field ID
     $form_id = 3; // Replace with your Gravity Form ID
     $hidden_field_id = 14; // Replace with the ID of the hidden field
