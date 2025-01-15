@@ -7,7 +7,7 @@ $datereported = date("Y-m-d h:i:sa");
 ?>
 <div class="row">
     <div class="col text-center">
-        <h1 class="h3 mb-5">Your contact for help</h1>
+        <h1 class="h3 mb-5">Feedback</h1>
     </div>
 </div>
 <div class="row mb-3">
