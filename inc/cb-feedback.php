@@ -12,7 +12,7 @@ ob_start();
 <div class="row mb-3">
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
-        <?php echo do_shortcode('[gravityform id="2" title="false" ajax="true"]'); ?>
+        <?php echo do_shortcode('[gravityform id="3" title="false" ajax="true"]'); ?>
     </div>
     <div class="col-lg-4"></div>
 </div>
