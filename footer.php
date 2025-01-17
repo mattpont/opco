@@ -34,13 +34,6 @@ if ( !is_page(array(61,65)) ) {
 } elseif ( is_page(array(65)) ) {
 ?>
 <div id="footer-top"></div>
-<div class="wrapper mt-5 fixed-bottom" id="wrapper-footer">
-	<div class="container">
-		<div class="row">
-		    <div class="col"></div>
-		</div>
-	</div>
-</div><!-- #wrapper-footer -->
 <?php
 }
 ?>
