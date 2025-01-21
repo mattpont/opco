@@ -16,7 +16,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
 <?php
-if ( !is_page(array(61,65)) ) {
+if ( !is_page(array(57,61,65)) ) {
 ?>
 <div id="footer-top"></div>
 <div class="wrapper mt-5 fixed-bottom" id="wrapper-footer">
@@ -31,7 +31,7 @@ if ( !is_page(array(61,65)) ) {
 	</div>
 </div><!-- #wrapper-footer -->
 <?php
-} elseif ( is_page(array(65)) ) {
+} elseif ( is_page(array(57,65)) ) {
 ?>
 <div id="footer-top"></div>
 <?php
