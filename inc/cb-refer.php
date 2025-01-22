@@ -21,13 +21,6 @@ if (isset($_GET['company'])) {
     }
 }
 ?>
-<div class="row">
-    <div class="col-lg-3"></div>
-    <div class="col-lg-6 text-center">
-        <?=get_field("referral_intro", 'option')?>
-    </div>
-    <div class="col-lg-3"></div>
-</div>
 <div class="row mb-3">
     <div class="col-lg-3"></div>
     <div class="col-lg-6">
