@@ -22,11 +22,11 @@ if ( !is_page(array(57,61,65)) ) {
 <div class="wrapper mt-5 fixed-bottom" id="wrapper-footer">
 	<div class="container">
 		<div class="row">
-		    <div class="col-lg-4"></div>
-		    <div class="col-lg-4 text-center">
+		    <div class="col-lg-3"></div>
+		    <div class="col-lg-6 text-center">
 				<a href="/help/" class="btn btn-primary d-block rounded-pill">Help</a>
 			</div>
-		    <div class="col-lg-4"></div>
+		    <div class="col-lg-3"></div>
 		</div>
 	</div>
 </div><!-- #wrapper-footer -->

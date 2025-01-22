@@ -30,14 +30,14 @@ if ( get_query_var('region') ) {
 	//We're in the region stage now...
 ?>
 			<div class="row d-none">
-			    <div class="col-lg-4"></div>
-			    <div class="col-lg-4 text-center">
+			    <div class="col-lg-3"></div>
+			    <div class="col-lg-6 text-center">
         			<h6 class="h6">PROGRESS</h6>
 			        <div class="progress mb-5">
 			            <div class="progress-bar bg-primary text-black" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
 			        </div>
 			    </div>
-			    <div class="col-lg-4"></div>
+			    <div class="col-lg-3"></div>
 			</div>
 			<div class="row">
 				<div class="col text-center">
@@ -83,8 +83,8 @@ if ( $the_query->have_posts() ) {
 			    </div>
 			</div>
 			<div class="row">
-			    <div class="col-lg-4"></div>
-			    <div class="col-lg-2 text-center d-flex align-items-center">
+			    <div class="col-lg-3"></div>
+			    <div class="col-lg-3 text-center d-flex align-items-center">
 					<?php
 					if (has_post_thumbnail( $post->ID ) ):
 						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
@@ -94,7 +94,7 @@ if ( $the_query->have_posts() ) {
 					endif;
 					?>
 				</div>
-			    <div class="col-lg-2 text-center">
+			    <div class="col-lg-3 text-center">
 			    	<a href="/refer/?company=<?=get_the_ID()?>" class="btn btn-primary d-block mb-2 rounded-pill">Refer</a>
 			    	<?php
 			    	if ( get_field("contact_website") ) {
@@ -105,20 +105,20 @@ if ( $the_query->have_posts() ) {
 			    	?>
 			    	<a href="/help/?company=<?=get_the_ID()?>" class="btn btn-primary d-block mb-0 rounded-pill">Contact</a>
 			    </div>
-			    <div class="col-lg-4"></div>
+			    <div class="col-lg-3"></div>
 			</div>
 <?php
 	}
 } else {
 ?>
 			<div class="row">
-			    <div class="col-lg-4"></div>
-			    <div class="col-lg-4 text-center">
+			    <div class="col-lg-3"></div>
+			    <div class="col-lg-6 text-center">
 					<?php esc_html_e( 'We cannot find an exact OpCo to match your search, but please enter the referral details and we will get back to you with a suggestion.' ); ?>
             		<?php echo do_shortcode('[gravityform id="1" title="false" ajax="true" field_values=""]'); ?>
 			    	<button onclick="history.back()" class="btn btn-primary d-block w-100 mb-0 mt-3 rounded-pill">< Back</button>
 				</div>
-			    <div class="col-lg-4"></div>
+			    <div class="col-lg-3"></div>
 			</div>
 <?php
 }
@@ -133,14 +133,14 @@ wp_reset_postdata();
 	if ( $queried_object->parent == 0 ) {
 ?>
 			<div class="row d-none">
-			    <div class="col-lg-4"></div>
-			    <div class="col-lg-4 text-center">
+			    <div class="col-lg-3"></div>
+			    <div class="col-lg-6 text-center">
         			<h6 class="h6">PROGRESS</h6>
 			        <div class="progress mb-5">
 			            <div class="progress-bar bg-primary text-black" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
 			        </div>
 			    </div>
-			    <div class="col-lg-4"></div>
+			    <div class="col-lg-3"></div>
 			</div>
 
 			<div class="row">
@@ -150,8 +150,8 @@ wp_reset_postdata();
 			</div>
 
 			<div class="row mb-5">
-			    <div class="col-lg-4"></div>
-			    <div class="col-lg-4 text-center">
+			    <div class="col-lg-3"></div>
+			    <div class="col-lg-6 text-center">
 			        <select class="selectpicker w-100" data-live-search="true">
 			<?php
 			$terms = get_terms( array(
@@ -171,7 +171,7 @@ wp_reset_postdata();
 			?>
 			        </select>
 			    </div>
-			    <div class="col-lg-4"></div>
+			    <div class="col-lg-3"></div>
 			</div>
 
 			<div class="row">
@@ -187,8 +187,8 @@ wp_reset_postdata();
 			</div>
 
 			<div class="row d-none">
-			    <div class="col-lg-4"></div>
-			    <div class="col-lg-4 text-center">
+			    <div class="col-lg-3"></div>
+			    <div class="col-lg-6 text-center">
 			<?php
 			$taxonomies = get_terms( array(
 				'taxonomy' => 'division',
@@ -208,20 +208,20 @@ wp_reset_postdata();
 			endif;
 			?>
 				</div>
-			    <div class="col-lg-4"></div>
+			    <div class="col-lg-3"></div>
 			</div>
 	<?php
 	} else {
 	?>			
 			<div class="row d-none">
-			    <div class="col-lg-4"></div>
-			    <div class="col-lg-4 text-center">
+			    <div class="col-lg-3"></div>
+			    <div class="col-lg-6 text-center">
        				<h6 class="h6">PROGRESS</h6>
 			        <div class="progress mb-5">
 			            <div class="progress-bar bg-primary text-black" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
 			        </div>
 			    </div>
-			    <div class="col-lg-4"></div>
+			    <div class="col-lg-3"></div>
 			</div>
 
 			<div class="row">
@@ -231,8 +231,8 @@ wp_reset_postdata();
 			</div>
 
 			<div class="row">
-			    <div class="col-lg-4"></div>
-			    <div class="col-lg-4 text-center">
+			    <div class="col-lg-3"></div>
+			    <div class="col-lg-6 text-center">
 			<?php
 			$taxonomies = get_terms( array(
 				'taxonomy' => 'region',
@@ -253,7 +253,7 @@ wp_reset_postdata();
 			endif;
 			?>
 				</div>
-			    <div class="col-lg-4"></div>
+			    <div class="col-lg-3"></div>
 			</div>
 <?php
 	}	
