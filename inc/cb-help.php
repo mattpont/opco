@@ -13,8 +13,8 @@ $company = get_query_var('company');
 </div>
 
 <div class="row">
-    <div class="col-lg-4"></div>
-    <div class="col-lg-4 text-center">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6 text-center">
         <form name="formhelp" action="/help-form/" method="POST">
 <?php
 $args = array(
@@ -68,7 +68,7 @@ echo '</select>';
             <button type="submit" class="btn btn-primary-reverse d-block rounded-pill mt-4 w-100">Search <i class="ms-2 fa-solid fa-magnifying-glass"></i></button>
         </form>
     </div>
-    <div class="col-lg-4"></div>
+    <div class="col-lg-3"></div>
 </div>
 
 <?php
@@ -103,21 +103,21 @@ if (isset($_POST['help_company_contact'])) {
 ?>
 
     <div class="row mb-3">
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4 text-center">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 text-center">
             <b>Company:</b> <?=$contact_company?>
         </div>
-        <div class="col-lg-4"></div>
+        <div class="col-lg-3"></div>
     </div>
 <?php
     if ( get_field("contact_name") ) {
     ?>
     <div class="row mb-3">
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4 text-center">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 text-center">
             <b>Name:</b> <?=$contact_name?>
         </div>
-        <div class="col-lg-4"></div>
+        <div class="col-lg-3"></div>
     </div>
     <?php
     }
@@ -125,11 +125,11 @@ if (isset($_POST['help_company_contact'])) {
     if ( get_field("contact_phone") ) {
     ?>
     <div class="row mb-3">
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4 text-center">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 text-center">
             <b>Telephone:</b> <a href="tel:<?=$contact_phone?>"><?=$contact_phone?></a>
         </div>
-        <div class="col-lg-4"></div>
+        <div class="col-lg-3"></div>
     </div>
     <?php
     }
@@ -156,12 +156,12 @@ if (isset($_POST['help_company'])) {
 
 
     <div class="row mb-3">
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
             <?php echo do_shortcode('[gravityform id="1" title="false" ajax="true" field_values="sender_email=' . $sender_email . '&contact_email=' . $contact_email . '&sender_company=' . $sender_company . '"]'); ?>
             <a href="/help/" class="btn btn-primary d-block rounded-pill mt-4 w-100">< Back</a>
         </div>
-        <div class="col-lg-4"></div>
+        <div class="col-lg-3"></div>
     </div>
     <?php
         }
@@ -170,12 +170,12 @@ if (isset($_POST['help_company'])) {
 } else { 
     ?>
     <div class="row mb-3">
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4 text-center">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 text-center">
             Cannot find contact - please try again.
             <a href="/help/" class="btn btn-primary d-block rounded-pill mt-4 w-100">< Back</a>
         </div>
-        <div class="col-lg-4"></div>
+        <div class="col-lg-3"></div>
     </div>
     <?php
 }

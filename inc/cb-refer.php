@@ -27,11 +27,11 @@ if (isset($_GET['company'])) {
     </div>
 </div>
 <div class="row mb-3">
-    <div class="col-lg-4"></div>
-    <div class="col-lg-4">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
         <?php echo do_shortcode('[gravityform id="2" title="false" ajax="false" field_values="company_email=' . $contact_email . '&recipient=' . $contact_company . '"]'); ?>
     </div>
-    <div class="col-lg-4"></div>
+    <div class="col-lg-3"></div>
 </div>
 <script>
 //input_2_3

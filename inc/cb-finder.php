@@ -43,14 +43,14 @@ ob_start();
 }
 </style>
 <div class="row d-none">
-    <div class="col-lg-4"></div>
-    <div class="col-lg-4 text-center">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6 text-center">
         <h6 class="h6">PROGRESS</h6>
         <div class="progress mb-5">
             <div class="progress-bar bg-primary text-black" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
         </div>
     </div>
-    <div class="col-lg-4"></div>
+    <div class="col-lg-3"></div>
 </div>
 
 <div class="row">
@@ -61,8 +61,8 @@ ob_start();
 </div>
 
 <div class="row mb-3">
-    <div class="col-lg-4"></div>
-    <div class="col-lg-4 text-center">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6 text-center">
         <select class="selectpicker w-100 d-none" data-live-search="true" title="Please type to filter these services...">
 <?php
 $terms = get_terms( array(
@@ -96,7 +96,7 @@ foreach( $terms as $term ) {
         <input type="text" id="division-autocomplete" class="w-100 form-control" placeholder="Please type to filter these services...">
         <input type="hidden" id="division-slug" name="division_slug">
     </div>
-    <div class="col-lg-4"></div>
+    <div class="col-lg-3"></div>
 </div>
 
 <div class="row mb-5">
@@ -112,8 +112,8 @@ foreach( $terms as $term ) {
 </div>
 
 <div class="row mb-5">
-    <div class="col-lg-4"></div>
-    <div class="col-lg-4 text-center">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6 text-center">
 <?php
 $terms = get_terms( array(
     'taxonomy'   => 'division', // Swap in your custom taxonomy name
@@ -129,7 +129,7 @@ foreach( $terms as $term ) {
 }
 ?>
     </div>
-    <div class="col-lg-4"></div>
+    <div class="col-lg-3"></div>
 </div>
 
 <script>
