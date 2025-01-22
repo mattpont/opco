@@ -27,17 +27,17 @@ $datereported = date("Y-m-d h:i:sa");
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <button class="nav-link d-none active" id="nav-start-tab" data-bs-toggle="tab" data-bs-target="#nav-start" type="button" role="tab" aria-controls="nav-start" aria-selected="true"></button>
-                <button class="nav-link border border-dark border-bottom-0 text-secondary p-lg-3 p-1 pt-3 col-4" id="nav-speak-tab" data-bs-toggle="tab" data-bs-target="#nav-speak" type="button" role="tab" aria-controls="nav-speak" aria-selected="false">
-                    <i class="fa-regular fa-comment fa-2xl" style="color: #1d4220;"></i>
-                    <div class="mt-3 mb-2 fs-6 nav-sml">Speak Up</div>
+                <button class="nav-link border border-dark border-bottom-0 text-secondary p-lg-3 p-1 pt-3 col-4" id="nav-compliment-tab" data-bs-toggle="tab" data-bs-target="#nav-compliment" type="button" role="tab" aria-controls="nav-compliment" aria-selected="false">
+                    <i class="fa-regular fa-thumbs-up fa-2xl" style="color: #1d4220;"></i>
+                    <div class="mt-3 mb-2 fs-6 nav-sml">Compliment</div>
                 </button>
                 <button class="nav-link border border-dark border-bottom-0 text-secondary p-lg-3 p-1 pt-3 col-4" id="nav-recommendation-tab" data-bs-toggle="tab" data-bs-target="#nav-recommendation" type="button" role="tab" aria-controls="nav-recommendation" aria-selected="false">
                     <i class="fa-regular fa-lightbulb fa-2xl" style="color: #1d4220;"></i>
                     <div class="mt-3 mb-2 fs-6 nav-sml">Recommendation</div>
                 </button>
-                <button class="nav-link border border-dark border-bottom-0 text-secondary p-lg-3 p-1 pt-3 col-4" id="nav-compliment-tab" data-bs-toggle="tab" data-bs-target="#nav-compliment" type="button" role="tab" aria-controls="nav-compliment" aria-selected="false">
-                    <i class="fa-regular fa-thumbs-up fa-2xl" style="color: #1d4220;"></i>
-                    <div class="mt-3 mb-2 fs-6 nav-sml">Compliment</div>
+                <button class="nav-link border border-dark border-bottom-0 text-secondary p-lg-3 p-1 pt-3 col-4" id="nav-speak-tab" data-bs-toggle="tab" data-bs-target="#nav-speak" type="button" role="tab" aria-controls="nav-speak" aria-selected="false">
+                    <i class="fa-regular fa-comment fa-2xl" style="color: #1d4220;"></i>
+                    <div class="mt-3 mb-2 fs-6 nav-sml">Speak Up</div>
                 </button>
             </div>
         </nav>
