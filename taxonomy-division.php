@@ -40,10 +40,12 @@ if ( get_query_var('region') ) {
 			    <div class="col-lg-3"></div>
 			</div>
 			<div class="row">
-				<div class="col text-center">
+			    <div class="col-lg-3"></div>
+				<div class="col-lg-6  text-center">
 					<h2 class="h3 mt-0 mb-5">Your results:</h2>
 					<?=get_field("your_results_text", 'option')?>
 				</div>
+			    <div class="col-lg-3"></div>
 			</div>
 
 <?php
