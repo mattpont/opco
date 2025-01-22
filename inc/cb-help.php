@@ -82,7 +82,7 @@ ob_start();
 
 <div class="row">
     <div class="col text-center">
-        <h1 class="h3 mb-5">Your contact for help</h1>
+        <h1 class="h3 mb-5">Ask your cross sell administrator for help</h1>
     </div>
 </div>
 
