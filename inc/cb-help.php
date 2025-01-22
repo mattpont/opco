@@ -7,9 +7,11 @@ $company = get_query_var('company');
 ?>
 
 <div class="row">
-    <div class="col text-center">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6 text-center">
         <h1 class="h3 mb-5">Your contact for help</h1>
     </div>
+    <div class="col-lg-3"></div>
 </div>
 
 <div class="row">
@@ -81,9 +83,11 @@ ob_start();
 ?>
 
 <div class="row">
-    <div class="col text-center">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6 text-center">
         <h1 class="h3 mb-5">Ask your cross sell administrator for help</h1>
     </div>
+    <div class="col-lg-3"></div>
 </div>
 
 <?php
