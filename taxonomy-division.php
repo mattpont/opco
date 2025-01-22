@@ -42,7 +42,7 @@ if ( get_query_var('region') ) {
 			<div class="row">
 				<div class="col text-center">
 					<h2 class="h3 mt-0 mb-5">Your results:</h2>
-					<?=get_field("your_results_text")?>
+					<?=get_field("your_results_text", 'option')?>
 				</div>
 			</div>
 
