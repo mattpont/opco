@@ -23,7 +23,7 @@ if (isset($_GET['company'])) {
 ?>
 <div class="row">
     <div class="col text-center">
-        <h1 class="h5">Complete the form to send your referral</h1>
+        <?=get_field("referral_intro", 'option')?>
     </div>
 </div>
 <div class="row mb-3">
