@@ -97,7 +97,7 @@ if ( $the_query->have_posts() ) {
 					endif;
 					?>
 				</div>
-			    <div class="col-lg-3 text-center">
+			    <div class="col-lg-3 col-11 text-center">
 			    	<a href="/refer/?company=<?=get_the_ID()?>" class="btn btn-primary d-block mb-2 rounded-pill">Refer</a>
 			    	<?php
 			    	if ( get_field("contact_website") ) {
@@ -108,8 +108,28 @@ if ( $the_query->have_posts() ) {
 			    	?>
 			    	<a href="/help/?company=<?=get_the_ID()?>" class="btn btn-primary d-block mb-0 rounded-pill">Contact</a>
 			    </div>
-			    <div class="col-lg-3"></div>
+			    <div class="col-lg-3 col-1 p-0">
+			    	<i class="fa-solid fa-circle-info" style="margin-top: 13px;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+			    </div>
 			</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="fa-solid fa-circle-info"></i></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      	<?=get_field("modal_text", 'option')?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 <?php
 	}
 } else {
