@@ -135,7 +135,7 @@ if ( $the_query->have_posts() ) {
 ?>
 			<div class="row">
 			    <div class="col-lg-3"></div>
-			    <div class="col-lg-6 text-center">
+			    <div class="col-lg-6">
             		<?php echo do_shortcode('[gravityform id="7" title="false" ajax="true" field_values=""]'); ?>
 			    	<button onclick="history.back()" class="btn btn-primary d-block w-100 mb-0 mt-3 rounded-pill">< Back</button>
 				</div>
