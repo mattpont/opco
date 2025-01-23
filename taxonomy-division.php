@@ -39,15 +39,6 @@ if ( get_query_var('region') ) {
 			    </div>
 			    <div class="col-lg-3"></div>
 			</div>
-			<div class="row">
-			    <div class="col-lg-3"></div>
-				<div class="col-lg-6  text-center">
-					<h2 class="h3 mt-0 mb-5">Your results:</h2>
-					<?=get_field("your_results_text", 'option')?>
-				</div>
-			    <div class="col-lg-3"></div>
-			</div>
-
 <?php
 //echo "division: " . $queried_object->term_id;
 //echo "<hr>";
@@ -80,6 +71,14 @@ if ( $the_query->have_posts() ) {
 	while ( $the_query->have_posts() ) {
 		$the_query->the_post();
 ?>
+			<div class="row">
+			    <div class="col-lg-3"></div>
+				<div class="col-lg-6  text-center">
+					<h2 class="h3 mt-0 mb-5">Your results:</h2>
+					<?=get_field("your_results_text", 'option')?>
+				</div>
+			    <div class="col-lg-3"></div>
+			</div>
 			<div class="row">
 			    <div class="col py-2">
 			    	<hr>
@@ -137,8 +136,7 @@ if ( $the_query->have_posts() ) {
 			<div class="row">
 			    <div class="col-lg-3"></div>
 			    <div class="col-lg-6 text-center">
-					<?php esc_html_e( 'We cannot find an exact OpCo to match your search, but please enter the referral details and we will get back to you with a suggestion.' ); ?>
-            		<?php echo do_shortcode('[gravityform id="1" title="false" ajax="true" field_values=""]'); ?>
+            		<?php echo do_shortcode('[gravityform id="7" title="false" ajax="true" field_values=""]'); ?>
 			    	<button onclick="history.back()" class="btn btn-primary d-block w-100 mb-0 mt-3 rounded-pill">< Back</button>
 				</div>
 			    <div class="col-lg-3"></div>
