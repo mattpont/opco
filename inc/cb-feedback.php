@@ -43,7 +43,7 @@ $datereported = date("Y-m-d h:i:sa");
         </nav>
         <div class="tab-content bg-grey p-3 border border-dark border-top-0" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-start" role="tabpanel" aria-labelledby="nav-start-tab" tabindex="0">
-                <p>Please select your form above.</p>
+                <p>What would you like to say?</p>
             </div>
             <div class="tab-pane fade" id="nav-speak" role="tabpanel" aria-labelledby="nav-speak-tab" tabindex="0">
                 <?php echo do_shortcode('[gravityform id="4" title="false" ajax="true" field_values="&datereported=' . $datereported . '"]'); ?>
