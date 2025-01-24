@@ -68,8 +68,6 @@ $the_query = new WP_Query( $args );
 
 // The Loop.
 if ( $the_query->have_posts() ) {
-	while ( $the_query->have_posts() ) {
-		$the_query->the_post();
 ?>
 			<div class="row">
 			    <div class="col-lg-3"></div>
@@ -79,6 +77,10 @@ if ( $the_query->have_posts() ) {
 				</div>
 			    <div class="col-lg-3"></div>
 			</div>
+<?php
+	while ( $the_query->have_posts() ) {
+		$the_query->the_post();
+?>
 			<div class="row">
 			    <div class="col py-2">
 			    	<hr>
