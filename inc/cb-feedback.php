@@ -35,7 +35,7 @@ $datereported = date("Y-m-d h:i:sa");
                     <i class="fa-regular fa-lightbulb fa-2xl" style="color: #1d4220;"></i>
                     <div class="mt-3 mb-2 fs-6 nav-sml">Recommendation</div>
                 </button>
-                <a href="https://andwis.trusty.report/" target="_blank" class="nav-link border border-dark border-bottom-0 text-secondary p-lg-3 p-1 pt-3 col-4" id="nav-speak-tab" type="button" role="tab" aria-controls="nav-speak" aria-selected="false">
+                <a href="https://andwis.trusty.report/" target="_blank" class="nav-link border border-dark border-bottom-0 text-secondary p-lg-3 p-1 pt-3 col-4 text-center" id="nav-speak-tab" type="button" role="tab" aria-controls="nav-speak" aria-selected="false">
                     <i class="fa-regular fa-comment fa-2xl" style="color: #1d4220;"></i>
                     <div class="mt-3 mb-2 fs-6 nav-sml">Speak Up</div>
                 </a>
