@@ -35,10 +35,10 @@ $datereported = date("Y-m-d h:i:sa");
                     <i class="fa-regular fa-lightbulb fa-2xl" style="color: #1d4220;"></i>
                     <div class="mt-3 mb-2 fs-6 nav-sml">Recommendation</div>
                 </button>
-                <button class="nav-link border border-dark border-bottom-0 text-secondary p-lg-3 p-1 pt-3 col-4" id="nav-speak-tab" data-bs-toggle="tab" data-bs-target="#nav-speak" type="button" role="tab" aria-controls="nav-speak" aria-selected="false">
+                <a href="https://andwis.trusty.report/" target="_blank" class="nav-link border border-dark border-bottom-0 text-secondary p-lg-3 p-1 pt-3 col-4" id="nav-speak-tab" type="button" role="tab" aria-controls="nav-speak" aria-selected="false">
                     <i class="fa-regular fa-comment fa-2xl" style="color: #1d4220;"></i>
                     <div class="mt-3 mb-2 fs-6 nav-sml">Speak Up</div>
-                </button>
+                </a>
             </div>
         </nav>
         <div class="tab-content bg-grey p-3 border border-dark border-top-0" id="nav-tabContent">
@@ -50,9 +50,6 @@ $datereported = date("Y-m-d h:i:sa");
             </div>
             <div class="tab-pane fade" id="nav-recommendation" role="tabpanel" aria-labelledby="nav-recommendation-tab" tabindex="0">
                 <?php echo do_shortcode('[gravityform id="5" title="false" ajax="true" field_values="&datereported=' . $datereported . '"]'); ?>
-            </div>
-            <div class="tab-pane fade" id="nav-compliment" role="tabpanel" aria-labelledby="nav-compliment-tab" tabindex="0">
-                <?php echo do_shortcode('[gravityform id="6" title="false" ajax="true" field_values="&datereported=' . $datereported . '"]'); ?>
             </div>
         </div>
     </div>
